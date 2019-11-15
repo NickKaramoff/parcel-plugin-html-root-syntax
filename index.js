@@ -26,7 +26,7 @@ function replaceRootSyntaxWithAbsolutePath(bundle) {
       })
 
       if (shouldUpdate) {
-        fs.writeFileSync(filePath, $.html())
+        fs.writeFileSync(filePath, $.html({ decodeEntities: false }))
       }
     })
   }
